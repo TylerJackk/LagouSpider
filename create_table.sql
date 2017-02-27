@@ -1,0 +1,23 @@
+CREATE TABLE `t_position` (
+  `t_company_id` varchar(255) DEFAULT NULL,
+  `t_company_name` varchar(255) DEFAULT NULL,
+  `t_company_size` varchar(255) DEFAULT NULL,
+  `t_company_website` varchar(255) DEFAULT NULL,
+  `t_position_id` int(11) NOT NULL,
+  `t_position_name` varchar(255) DEFAULT NULL,
+  `t_work_year` varchar(255) DEFAULT NULL,
+  `t_education` varchar(255) DEFAULT NULL,
+  `t_jobnature` varchar(255) DEFAULT NULL,
+  `t_salary` varchar(10) DEFAULT NULL,
+  `t_finance_stage` varchar(255) DEFAULT NULL,
+  `t_finance_org` varchar(255) DEFAULT NULL,
+  `t_industry_field` varchar(255) DEFAULT NULL,
+  `t_publish_time` datetime DEFAULT NULL,
+  `t_position_advantage` varchar(255) DEFAULT NULL,
+  `t_city` varchar(255) DEFAULT NULL,
+  `t_district` varchar(255) DEFAULT NULL,
+  `t_url` varchar(255) DEFAULT NULL,
+  `t_job_detail` varchar(2000) DEFAULT NULL,
+  `t_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`t_position_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
