@@ -65,5 +65,3 @@ class LagouSpider(scrapy.Spider):
 		item['positionId'] = soup.select("#jobid")[0]['value']
 		item['companyId'] = soup.select("#companyid")[0]['value']
 		return item
-
-	# publish_time = list(soup.find("p", class_="publish_time").stripped_strings)[0]  # 1天前  发布于拉勾网
