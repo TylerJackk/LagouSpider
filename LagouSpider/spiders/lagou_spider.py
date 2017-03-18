@@ -26,7 +26,7 @@ class LagouSpider(scrapy.Spider):
 	def make_url(self, response):
 		soup = BeautifulSoup(response.body, "lxml")
 		for url in soup.find_all("a", "position_link"):
-			job_url = "https:" + url['href']  # 职位详情的url
+			job_url = url['href']  # 职位详情的url
 			yield self.make_requests_from_url(job_url)
 
 	def parse(self, response):
