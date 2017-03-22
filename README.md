@@ -42,5 +42,23 @@
 or
 
 	python main.py
+	
+## Linux部署
+virtualenv创建环境
+
+修改run.sh，设置virtualenv路径和scrapy路径
+
+	#!/bin/bash
+
+	export PATH=$PATH:/usr/local/bin
+
+	source  /home/ubuntu/lagouenv/bin/activate
+	cd /home/ubuntu/LagouSpider/LagouSpider
+
+	nohup scrapy crawl lagou >> example.log 2>&1 &
+配置crontab每日定时运行
+
+	15 09  * * * (source /home/ubuntu/LagouSpider/LagouSpider/run.sh)
+
 ## 职位分析
 实现中
