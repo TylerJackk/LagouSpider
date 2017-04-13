@@ -11,7 +11,7 @@ class LagouSpider(scrapy.Spider):
 	allowed_domains = ["lagou.com"]
 	start_urls = ["https://www.lagou.com/zhaopin/"]
 
-	def __init__(self):
+	def __init__(self, *arg, **kwargs):
 		self.headers = HEADERS
 		self.jobs = JOBS
 		self.job = ''
