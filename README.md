@@ -46,19 +46,20 @@ or
 ## Linux部署
 virtualenv创建环境
 
-修改run.sh，设置virtualenv路径和scrapy路径
+scrapyd + [SpiderKeeper](https://github.com/DormyMo/SpiderKeeper)
 
-	#!/bin/bash
+新建screen开启scrapyd服务
 
-	export PATH=$PATH:/usr/local/bin
+	scrapyd
 
-	source  /home/ubuntu/lagouenv/bin/activate
-	cd /home/ubuntu/LagouSpider/LagouSpider
+进入scrapy根目录
 
-	nohup scrapy crawl lagou >> example.log 2>&1 &
-配置crontab每日定时运行
+	scrapyd-deploy name
+	
+剩余步骤参考SpiderKeeper文档
 
-	15 09  * * * (source /home/ubuntu/LagouSpider/LagouSpider/run.sh)
+DashBoard配置任务定时运行
+	
 
 ## 职位分析
 实现中
